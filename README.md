@@ -97,3 +97,14 @@ SnakeGame/
 * オブジェクト指向プログラミング
 * ゲーム状態管理
 * コードのリファクタリング
+
+## スクリーンショット
+
+### スタート画面
+![Start screen](screenshots/game_start.png)
+
+### プレイ画面
+![Gameplay](screenshots/in_game.png)
+
+### ゲームオーバー画面
+![Game over](screenshots/game_over.png)
