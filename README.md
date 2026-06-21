@@ -1,18 +1,31 @@
 # Snake Game in Processing
 
-A classic grid-based Snake game implemented in Processing.
+## 概要
 
-## Overview
+このプロジェクトは、Processingを用いて実装したクラシックなスネークゲームである。
 
-The player controls the snake using the arrow keys, eats apples to increase the score, and wins after collecting 10 apples. The game includes a start screen, game-over screen, game-clear screen, collision detection, and restart flow.
+プレイヤーは矢印キーでヘビを操作し、フィールド上に出現するリンゴを食べてスコアを増やす。壁や自分自身に衝突するとゲームオーバーになり、一定数のリンゴを食べるとゲームクリアとなる。
 
+## 主な機能
 
-## Controls
+* スタート画面の表示
+* 矢印キーによるヘビの移動
+* リンゴのランダム生成
+* リンゴを食べた際のスコア加算
+* リンゴを食べた際のヘビの成長
+* 壁との衝突判定
+* 自己衝突判定
+* ゲームオーバー画面
+* ゲームクリア画面
+* リスタート機能
+* 複数クラスによるオブジェクト指向設計
 
-- Arrow keys: Move the snake
-- Shift: Start or restart the game
+## 操作方法
 
-## Project structure
+* 矢印キー：ヘビの移動
+* Shiftキー：ゲーム開始 / リスタート
+
+## プロジェクト構成
 
 ```text
 SnakeGame/
@@ -22,20 +35,65 @@ SnakeGame/
 └── Game.pde
 ```
 
-## Class design
+## クラス構成
 
-- `Snake`: Handles movement, growth, drawing, and collision checks.
-- `Food`: Handles apple placement and rendering.
-- `Game`: Handles game state, screens, score display, and grid drawing.
+### Snake
 
-## How to run
+ヘビ本体の管理を行うクラスである。
 
-1. Install Processing.
-2. Open the `SnakeGame/` folder in Processing.
-3. Open `SnakeGame.pde`.
-4. Click the Run button.
+主な役割：
 
-## required application for excution
+* ヘビの座標管理
+* 移動処理
+* 成長処理
+* 描画処理
+* 壁との衝突判定
+* 自己衝突判定
 
-- Processing(4.1.1)
+### Food
 
+リンゴの管理を行うクラスである。
+
+主な役割：
+
+* リンゴの座標管理
+* リンゴの再配置
+* リンゴの描画
+* ヘビと重ならない位置への配置
+
+### Game
+
+ゲーム全体の状態管理を行うクラスである。
+
+主な役割：
+
+* スタート画面の表示
+* ゲーム中画面の管理
+* ゲームオーバー画面の表示
+* ゲームクリア画面の表示
+* スコア表示
+* グリッド描画
+* 状態遷移の管理
+
+## 実行方法
+
+1. Processingをインストールする。
+2. `SnakeGame/` フォルダをProcessingで開く。
+3. `SnakeGame.pde` を開く。
+4. Runボタンを押して実行する。
+
+## 使用技術
+
+* Processing
+* Object-Oriented Programming
+
+
+## このプロジェクトで学んだこと
+
+* Processingにおけるゲームループの実装
+* キーボード入力処理
+* グリッドベースの座標管理
+* 衝突判定
+* オブジェクト指向プログラミング
+* ゲーム状態管理
+* コードのリファクタリング
